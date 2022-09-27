@@ -1,0 +1,9 @@
+services:
+  DMP\LoggableBundle\Aop\LoggablePointcut:
+    public: true
+    autowire: true
+    tags:
+      - { name: jms_aop.pointcut, interceptor: DMP\LoggableBundle\Aop\LoggableInterceptor}
+  DMP\LoggableBundle\Aop\LoggableInterceptor:
+    public: true
+    autowire: true

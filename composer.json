@@ -1,0 +1,31 @@
+{
+    "name": "dmp/loggable-bundle",
+    "license": "proprietary",
+    "type": "symfony-bundle",
+    "description": "Bundle for support of Loggable AOP annotation",
+    "require": {
+        "php": ">=8.1",
+        "dmp/aop-bundle": "^0.1",
+        "symfony/monolog-bundle": "^3.8",
+        "doctrine/annotations": "^v1.13"
+    },
+    "require-dev": {
+        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "phpunit/phpunit": "^9.5",
+        "symfony/http-kernel": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "DMP\\LoggableBundle\\":  "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DMP\\LoggableBundle\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-cc": "phpunit coverage-html report/"
+    }
+}
