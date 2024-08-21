@@ -5,15 +5,15 @@
     "description": "Bundle for support of Loggable AOP annotation",
     "require": {
         "php": ">=8.1",
-        "dmp/aop-bundle": "^0.1",
-        "symfony/monolog-bundle": "^3.8",
+        "dmp/aop-bundle": "^1.0.0",
+        "symfony/monolog-bundle": "*",
         "doctrine/annotations": "^v1.13",
-        "symfony/serializer":  "v5.4.13"
+        "symfony/serializer":  "*"
     },
     "require-dev": {
         "matthiasnoback/symfony-dependency-injection-test": "^4.3",
         "phpunit/phpunit": "^9.5",
-        "symfony/http-kernel": "^5.4"
+        "symfony/http-kernel": "*"
     },
     "autoload": {
         "psr-4": {
@@ -28,5 +28,11 @@
     "scripts": {
         "test": "phpunit",
         "test-cc": "phpunit coverage-html report/"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "6.4.*"
+        }
     }
 }
